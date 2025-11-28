@@ -5,9 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE SMART SCHOOL GM CAMPUS HALA</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #800000;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content .logo {
+            width: 80px;
+            margin-right: 20px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            background: #00162e;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background: #0056b3;
+        }
+
+        /* Announcement Section */
+        .announcement {
+            background: #ffeb3b;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .announcement a {
+            text-decoration: none;
+            color: #007bff;
+            margin-left: 10px;
+        }
+
+        .announcement a:hover {
+            text-decoration: underline;
+        }
+
+        /* Principal Section */
+        .principal-section {
+            display: flex;
+            align-items: center;
+            padding: 40px 20px;
+            background: #ffffff;
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px #ccc;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .principal-section img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .principal-message {
+            flex: 1;
+        }
+
+        .principal-message h2 {
+            margin-top: 0;
+        }
+
+        /* Vision & Mission Section */
+        section#vision-mission {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px #ccc;
+        }
+
+        section#vision-mission h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section#vision-mission dl dt {
+            margin-bottom: 10px;
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 20px;
+        }
+
+    </style>
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="header-content">
             <img src="images/logo.png" alt="AL-TAHIR Logo" class="logo">
@@ -18,26 +149,44 @@
         </div>
     </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="admission.html">Registeration</a></li>
-        <li><a href="course.html">Courses</a></li>
-        <li><a href="team.html">Meet Our Team</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">Developer Team</a></li>
-        <li><a href="contact.html">Developer Contact</a></li>
-    </ul>
-</nav>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admission.html">Registration</a></li>
+            <li><a href="course.html">Sections</a></li>
+            <li><a href="team.html">Meet Our Team</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Developer Team</a></li>
+            <li><a href="contact.html">Developer Contact</a></li>
+        </ul>
+    </nav>
 
-<section id="home">
-    <h2>WELCOME TO THE SMART SCHOOL GHULAM MUHAMMAD CAMPUS HALA NEW!</h2>
-    <dl> <b> Our Vision:</b> </dl>
+    <!-- ANNOUNCEMENT -->
+    <div class="announcement">
+        New Announcement: Science-Tech Exhibition is coming soon! 
+        <a href="admission.html">Register Now</a>
+    </div>
+
+    <!-- PRINCIPAL SECTION -->
+    <div class="principal-section">
+        <img src="images/rafia.jpg" alt="Principal">
+        <div class="principal-message">
+            <h2>Message from Principal</h2>
+                        <h3>Madam Rafia Hussain</h3>
+            <p>Welcome to THE SMART SCHOOL Ghulam Muhammad Campus Hala! We are committed to providing high-quality education and nurturing students to become creative, positive, and independent learners. Our team works tirelessly to ensure that every student excels academically and grows as a responsible citizen. Join us for an exciting journey of learning and innovation!</p>
+        </div>
+    </div>
+
+    <!-- VISION & MISSION SECTION -->
+    <section id="vision-mission">
+        <h2>Our Vision & Mission</h2>
+
+        <dl><b>Smart School Vision:</b></dl>
         <dt>To be a leading institution in Pakistan by providing high-quality, affordable, and accessible education.</dt>
         <dt>To empower students to be creative, positive, and independent, striving for academic excellence and societal improvement.</dt>
-        <dt>To ensure education is accessible to all through innovative and technology-driven learning methods.</dt>
-<br>
-    <dl><b>Mission: </b></dl>
+        <dt>To ensure education is accessible to all through innovative and technology-driv
+<dl><b>Smart School Mission: </b></dl>
         <dt>To make quality education accessible and affordable for every learner across Pakistan.</dt>
         <dt>To provide a welcoming, happy, safe, and supportive learning environment where every student is equal and achievements are celebrated.</dt>
         <dt>To equip students with the knowledge, skills, and values to compete and excel in a rapidly evolving world.</dt>
