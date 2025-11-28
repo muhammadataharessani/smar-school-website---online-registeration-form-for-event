@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SMART SCHOOL GM CAMPUS HALA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="AL-TAHIR Logo" class="logo">
+            <div class="header-text">
+                <h1>THE SMART SCHOOL</h1>
+                <p>GHULAM MUHAMMAD CAMPUS HALA NEW</p>
+            </div>
+        </div>
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>       
+         <li><a href="admission.html">Registeration</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="team.html">Meet Our Team</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">Developer Team</a></li>
+        <li><a href="contact.html">Developer Contact</a></li>
+    </ul>
+</nav>
+
+<head>
+    <title>Science Fair Event Registeration Form</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 450px;
+            margin: 40px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px #ccc;
+        }
+        h2 { text-align: center; }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+        #msg {
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Registration Form</h2>
+
+    <form id="admissionForm">
+
+        <label>Student Name</label>
+        <input type="text" name="studentName" required>
+
+        <label>Father Name</label>
+        <input type="text" name="fatherName" required>
+
+        <label>Email</label>
+        <input type="email" name="email">
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" pattern="[0-9]{11}" title="Enter 11-digit phone number" required>
+
+        <label>Address</label>
+        <textarea name="address" required></textarea>
+
+                <label>Qualification </label>
+        <textarea name="qualification"></textarea>
+
+        <label>Designation </label>
+        <textarea name="designation"></textarea>
+
+        <button type="submit">Submit Form</button>
+    </form>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Replace this with your Google Apps Script Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyTa89qJ--DN11q2RMDRJyMUBrqlyzyI4bF99UpDBLCrYeCsTehx1L8h6UpyoNp_auqzw/exec";
+
+    // Use FormData for sending all fields easily
+    const formData = new FormData(this);
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+        document.getElementById("msg").innerHTML = "Admission Registered Successfully!";
+        this.reset();
+    })
+    .catch(error => {
+        document.getElementById("msg").innerHTML = "Error! Please try again.";
+        console.error("Error:", error);
+    });
+});
+</script>
+
+</body>
+</html>
