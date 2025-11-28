@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - THE SMART SCHOOL GM CAMPUS HALA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="AL-TAHIR Logo" class="logo">
+            <div class="header-text">
+                <h1>THE SMART SCHOOL</h1>
+                <p>GHULAM MUHAMMAD CAMPUS HALA NEW</p>
+            </div>
+        </div>
+    </header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="admission.html">Registeration</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="team.html">Meet Our Team</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">Developer Team</a></li>
+        <li><a href="contact.html">Developer Contact</a></li>
+    </ul>
+</nav>
+<section id="gallery">
+        <h2>Gallery</h2>
+    
+        <div class="slider-container">
+    
+            <!-- Left Arrow -->
+            <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    
+            <!-- Slides Wrapper -->
+            <div class="slider" id="slider">
+    
+                <!-- Add as many images as you want -->
+                <img src="images/1g.jpg" alt="">
+                <img src="images/2g.jpg" alt="">
+                <img src="images/3g.jpg" alt="">
+                <img src="images/4g.jpg" alt="">
+                <img src="images/5g.jpg" alt="">
+                <img src="images/6g.jpg" alt="">
+                <img src="images/ict.jpg" alt="">
+                <img src="images/ict1.jpg" alt="">
+                <img src="images/7g.jpg" alt="">
+                <img src="images/47g.jpg" alt="">
+                <img src="images/48g.jpg" alt="">
+                <img src="images/49g.jpg" alt="">
+                <img src="images/50g.jpg" alt="">
+                <img src="images/51g.jpg" alt="">
+                <img src="images/52g.jpg" alt="">
+                <img src="images/53g.jpg" alt="">
+                <img src="images/54g.jpg" alt="">
+                <img src="images/55g.jpg" alt="">
+                <img src="images/56g.jpg" alt="">
+                <img src="images/8g.jpg" alt="">
+                <img src="images/9g.jpg" alt="">
+                <img src="images/10g.jpg" alt="">
+                <img src="images/11g.jpg" alt="">
+                <img src="images/12g.jpg" alt="">
+                <img src="images/13g.jpg" alt="">
+                <img src="images/14g.jpg" alt="">
+                <img src="images/15g.jpg" alt="">
+                <img src="images/16g.jpg" alt="">
+                <img src="images/17g.jpg" alt="">
+                <img src="images/18g.jpg" alt="">
+                <img src="images/19g.jpg" alt="">
+                <img src="images/20g.jpg" alt="">
+                <img src="images/21g.jpg" alt="">
+                <img src="images/22g.jpg" alt="">
+                <img src="images/23g.jpg" alt="">
+                <img src="images/24g.jpg" alt="">
+                <img src="images/25g.jpg" alt="">
+                <img src="images/26g.jpg" alt="">
+                <img src="images/27g.jpg" alt="">
+                <img src="images/28g.jpg" alt="">
+                <img src="images/29g.jpg" alt="">
+                <img src="images/30g.jpg" alt="">
+                <img src="images/31g.jpg" alt="">
+                <img src="images/32g.jpg" alt="">
+                <img src="images/33g.jpg" alt="">
+                <img src="images/34g.jpg" alt="">
+                <img src="images/35g.jpg" alt="">
+                <img src="images/36g.jpg" alt="">
+                <img src="images/37g.jpg" alt="">
+                <img src="images/38g.jpg" alt="">
+                <img src="images/39g.jpg" alt="">
+                <img src="images/40g.jpg" alt="">
+                <img src="images/41g.jpg" alt="">
+                <img src="images/42g.jpg" alt="">
+                <img src="images/43g.jpg" alt="">
+                <img src="images/44g.jpg" alt="">
+                <img src="images/45g.jpg" alt="">
+                <img src="images/46g.jpg" alt="">
+                
+               
+                <!-- Add up to 30+ images -->
+    
+            </div>
+    
+            <!-- Right Arrow -->
+            <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+<script>
+        let index = 0;
+        const slider = document.getElementById("slider");
+        const images = slider.children;
+        const total = images.length;
+    
+        function showSlide() {
+            slider.style.transform = `translateX(${-index * 100}%)`;
+        }
+    
+        function nextSlide() {
+            index = (index + 1) % total;
+            showSlide();
+        }
+    
+        function prevSlide() {
+            index = (index - 1 + total) % total;
+            showSlide();
+        }
+    
+        // Auto-slide (optional)
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>
